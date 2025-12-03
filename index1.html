@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--ex-1 events listening -->
+    <!-- <h1 onmouseenter="me()">This is a simple HTML + CSS template!</h1>
+    <button onclick="clicked()">Click me</button>
+    <script>
+      function clicked() {
+        console.log("button clicked");
+        alert("clicked!!");
+      }
+      function me() {
+        alert("this is heading");
+      }
+    </script> -->
+    <!--ex-1 events listening -->
+
+    <!-- ex-2 -->
+    <h1>counter</h1>
+    <h2 id="count_val">0</h2>
+    <button onclick="change_count(1)">+1</button>
+    <button onclick="change_count(-1)">-1</button>
+    <!-- <button onclick="add_one()">+1</button>
+    <button onclick="minus_one()">-1</button> -->
+    <script>
+      let count_value = 0;
+      let val = document.getElementById("count_val");
+      function add_one() {
+        count_value++;
+        // document.getElementById("count_val").innerHTML = count_value;
+        val.textContent = count_value;
+        console.log(count_value);
+      }
+      function minus_one() {
+        count_value--;
+        // document.getElementById("count_val").innerHTML = count_value;
+        val.textContent = count_value;
+        console.log(count_value);
+      }
+    </script>
+  </body>
+</html>

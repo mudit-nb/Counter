@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Counter App</h1>
+    <div style="display: flex">
+      <h2>
+        Count:
+        <h2 id="count_val">0</h2>
+      </h2>
+    </div>
+    <button id="incBtn">Increment</button>
+    <button id="decBtn" class="adds">Decrement</button>
+    <script>
+      const countNode = document.getElementById("count_val");
+      let count = 0;
+      let incNode = document.getElementById("incBtn");
+      let decNode = document.getElementById("decBtn");
+      incNode.addEventListener("click", inc);
+      decNode.addEventListener("click", () => {
+        count--;
+        countNode.textContent = count;
+      });
+      // decNode.addEventListener("click", (e) => {
+      //   count--;
+      //   console.log(e.target.id, e.target.innerHTML, e.target.class);
+      // });
+      function inc() {
+        count++;
+        countNode.textContent = count;
+      }
+      function dec() {
+        count--;
+        countNode.textContent = count;
+      }
+    </script>
+  </body>
+</html>
